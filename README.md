@@ -43,10 +43,13 @@ using namespace std;
 */
 
 int RandomNumber(int startPoint,int endPoint)
+
 {
-    int number = 0;
+   
+   int number = 0;
     number = rand() % (endPoint - startPoint -1) ;
     return number;
+
 }
 
 /**
