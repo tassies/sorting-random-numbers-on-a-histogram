@@ -3,32 +3,47 @@ For any random numbers that are generated, the program must sort them according 
 
 
 #include iostream
-#include <ctime>
-#include <cstdlib>
-#include <vector>
-#include <algorithm>
+
+#include ctime
+
+#include cstdlib
+
+#include vector
+
+#include algorithm
 
 using namespace std;
 
-//this variables can be accessed from by any function within this
-//project
- int oneToTen, tenToTwenty, TwentyToThirty, thirtyToFourty, fourtyToFifty = 0;
- int fiftyToSixty, sixtyToSeventy ,SeventyToEighty, eightyToNinety, ninetyToHundred = 0;
+//this variables can be accessed from by any function within this project
+
+ int oneToTen = 0;
+ int tenToTwenty = 0;
+ int TwentyToThirty = 0;
+ int thirtyToFourty = 0;
+ int fourtyToFifty = 0;
+ int fiftyToSixty = 0;
+ int sixtyToSeventy = 0;
+ int SeventyToEighty = 0;
+ int eightyToNinety = 0;
+ int ninetyToHundred = 0;
 
 /**
     Generate random numbers for the users given range
     return : random number
 */
+
 int RandomNumber(int startPoint,int endPoint)
 {
     int number = 0;
     number = rand() % (endPoint - startPoint -1) ;
     return number;
 }
+
 /**
     fill vector with integer values, for a given interval
     return : vector array
 */
+
 vector<int> PopulateVector(int vecSize,int startPoint,int endPoint)
 {
     int numbers = 0;
@@ -50,6 +65,7 @@ vector<int> PopulateVector(int vecSize,int startPoint,int endPoint)
     Find mode value
     return : mode
 */
+
 int MostAppearingValue(vector<int> myVector)
 {
     int mostOccur = myVector[1];
@@ -76,10 +92,12 @@ int MostAppearingValue(vector<int> myVector)
     }
     return mostOccur;//return value with most appearance
 }
+ 
 /**
     Calculate mean Value
     return : mean
 */
+
 int CalculateMean(vector<int> myVector)
 {
     int mean = 0;
@@ -92,25 +110,31 @@ int CalculateMean(vector<int> myVector)
     return mean;
 }
 
-/**
-    Calculate Median Value
-    return : median
-*/
+/**Calculate Median Value and return : median */
+
 int MiddleValue(vector<int> myVector)
 {
-    //sort(myVector.begin(),myVector.end(),"");
-    int midValue = myVector.size() / 2; //this to place the midValue in the middle of the vector
+    //sort
+ 
+ (myVector.begin(),myVector.end(),"");
+    int midValue = myVector.size() / 2;
+ 
+ /**this to place the midValue in the middle of the vector*/
 
-    //Check if length of Vector is even or odd
+  /**Check if length of Vector is even or odd*/
+    
+    
     if(myVector.size() % 2 == 0)
     {
-        //if vector size is even, there is no middle
-        //so we return the position
+   /**if vector size is even, there is no middle*/
+   /**so we return the position*/
+        
         return (myVector[midValue -1] + myVector[midValue]) / 2;
     }
     else
     {
-        //odd size, subtract 1 from the middle, the add the
+        /**odd size, subtract 1 from the middle, the add the*/
+        
         return myVector[midValue];
     }
 }
