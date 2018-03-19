@@ -17,15 +17,25 @@ using namespace std;
 //this variables can be accessed from by any function within this project
 
  int oneToTen = 0;
+ 
  int tenToTwenty = 0;
+ 
  int TwentyToThirty = 0;
+ 
  int thirtyToFourty = 0;
+ 
  int fourtyToFifty = 0;
+ 
  int fiftyToSixty = 0;
+ 
  int sixtyToSeventy = 0;
+ 
  int SeventyToEighty = 0;
+ 
  int eightyToNinety = 0;
+ 
  int ninetyToHundred = 0;
+ 
 
 /**
     Generate random numbers for the users given range
