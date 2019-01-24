@@ -2,20 +2,25 @@
 For any random numbers that are generated, the program must sort them according to the range give n and construct a histogram
 
 #include iostream
+
 #include ctime
+
 #include cstdlib
+
 #include vector
+
 #include algorithm
+
 using namespace std;
 
 //this variables can be accessed from by any function within this project
- int oneToTen, tenToTwenty, TwentyToThirty,thirtyToFourty, fourtyToFifty = 0;
- int fiftyToSixty,sixtyToSeventy,SeventyToEighty, eightyToNinety, ninetyToHundred = 0;
- 
 
-/**
-    Generate random numbers for the users given range
-    return : random number
+int oneToTen, tenToTwenty, TwentyToThirty,thirtyToFourty, fourtyToFifty = 0;
+
+int fiftyToSixty, sixtyToSeventy, SeventyToEighty, eightyToNinety, ninetyToHundred = 0; 
+
+/**Generate random numbers for the users given range
+  return : random number
 */
 
 int RandomNumber(int startPoint,int endPoint)
@@ -29,9 +34,8 @@ int RandomNumber(int startPoint,int endPoint)
 
 }
 
-/**
-    fill vector with integer values, for a given interval
-    return : vector array
+/**fill vector with integer values, for a given interval
+   return : vector array
 */
 
 vector<int> PopulateVector(int vecSize,int startPoint,int endPoint)
@@ -58,9 +62,8 @@ vector<int> PopulateVector(int vecSize,int startPoint,int endPoint)
     
 }
 
-/**
-    Find mode value
-    return : mode
+/**Find mode value 
+   return : mode
 */
 
 int MostAppearingValue(vector<int> myVector)
@@ -108,10 +111,10 @@ int MostAppearingValue(vector<int> myVector)
   }
     
     return mostOccur;//return value with most appearance
+
 }
 
-/**
-Calculate mean Value
+/**Calculate mean Value
 return : mean
 */
 
@@ -139,7 +142,7 @@ int CalculateMean(vector<int> myVector)
 
 int MiddleValue(vector<int> myVector)
 {
-
+ 
    //sort
 
    (myVector.begin(),myVector.end(),"");
@@ -170,9 +173,8 @@ int MiddleValue(vector<int> myVector)
      }
   }
 
-  /**
-  Count the number of values within a specified range
-  */
+  /**Count the number of values within a specified range*/
+  
 
   void CountNumberOfAppearance(vector<int> myVector)
   {
@@ -253,9 +255,7 @@ int MiddleValue(vector<int> myVector)
   }
  }
 
-   /**
-   Display Histogram
-   */
+   /**Display Histogram*/
 
 void DisplayHistogram(vector<int> myVector)
 {
@@ -374,10 +374,9 @@ void DisplayHistogram(vector<int> myVector)
 
 }
 
-  /**
-  Call the functions to find the mean
-                                 mode
-                                 median
+  /**Call the functions to find the mean
+                                    mode
+                                    median
   */
 
 void DisplayMeanModeMedian(vector<int> myVector)
