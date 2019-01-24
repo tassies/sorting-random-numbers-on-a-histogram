@@ -1,23 +1,15 @@
 # sorting-random-numbers-on-a-histogram
 For any random numbers that are generated, the program must sort them according to the range give n and construct a histogram
 
-
 #include iostream
-
 #include ctime
-
 #include cstdlib
-
 #include vector
-
 #include algorithm
-
 using namespace std;
 
 //this variables can be accessed from by any function within this project
-
  int oneToTen, tenToTwenty, TwentyToThirty,thirtyToFourty, fourtyToFifty = 0;
- 
  int fiftyToSixty,sixtyToSeventy,SeventyToEighty, eightyToNinety, ninetyToHundred = 0;
  
 
